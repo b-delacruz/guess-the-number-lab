@@ -6,23 +6,23 @@ const game = {
   smallestNum: 1,
   secretNum: null,
 
-  getGuess: function() {
-    let guess 
-      while(!guess || guess > this.biggestNum || guess < this.smallestNum) {
-        guess = parseInt(prompt(`Enter a guess between ${smallestNum} and ${biggestNum}`))
-        if ()
-      }
-    }
-
-  }
   play: function(){
     this.secretNum = Math.floor(Math.random() * 
       (this.biggestNum - this.smallestNum + 1)) + this.smallestNum
   }
-}
-  
-  
 
+  getGuess: function() {
+    let guess
+      do {
+        guess = parseInt(
+        prompt(`Enter a guess between ${smallestNum} and ${biggestNum}`)
+      )} while (
+        if (isNaN(guess) || guess < this.smallestNum || guess > this.biggestNum)
+        )
+      }
+    }
+
+  
 console.log(game)
 
 
